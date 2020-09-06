@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    overflow: hidden;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/bandit.svg) no-repeat top center;
+    background-size: contain;
+    animation: bgFadeIn 6s linear;
+    opacity: 1;
+}
+
+.container .box {
+    width: 450px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .box .title {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.container .box .title .block {
+    width: 0%;
+    height: inherit;
+    background: #ffb510;
+    position: absolute;
+    animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    display: flex;
+}
+
+.container .box .title h1 {
+    color: #fff;
+    font-size: 32px;
+    -webkit-animation: mainFadeIn 2s forwards;
+    -o-animation: mainFadeIn 2s forwards;
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+
+.container .box .description {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+    padding: 10px 0;
+}
+
+.container .box .description .block2 {
+    width: 0%;
+    height: 120%;
+    background: #e91e63;
+    position: absolute;
+    animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation-delay: 2s;
+    display: flex;
+}
+
+.container .box .description p {
+    animation: secFadeIn 2s forwards;
+    animation-delay: 3.2s;
+    opacity: 0;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.container .box .social {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+    padding-top: 10px;
+}
+
+.container .box .social .block {
+    width: 0%;
+    height: 150%;
+    background: #56d897;
+    position: absolute;
+    animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation-delay: 4s;
+    display: flex;
+}
+
+.container .box .social p a {
+    animation: secFadeIn 2s forwards;
+    animation-delay: 5.2s;
+    opacity: 0;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 1 !important;
+}
+
+@keyframes bgFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes mainBlock {
+    0% {
+        width: 0%;
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes secBlock {
+    0% {
+        width: 0%;
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes mainFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        width: 0px;
+        height: 0px;
+        background: #e9d856;
+        border: 0px solid #ddd;
+        opacity: 0;
+    }
+
+    50% {
+        width: 10px;
+        height: 10px;
+        background: #e9d856;
+        opacity: 1;
+        bottom: 45px;
+    }
+
+    65% {
+        width: 7px;
+        height: 7px;
+        bottom: 0px;
+        width: 15px;
+    }
+
+    80% {
+        width: 10px;
+        height: 10px;
+        bottom: 20px;
+    }
+
+    100% {
+        width: 7px;
+        height: 7px;
+        background: #e9d856;
+        border: 0px solid #222;
+        bottom: 9px;
+    }
+}
+
+@keyframes secFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.footer {
+    width: 350px;
+    height: 80px;
+    background: #ffb510;
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: top 0.8s forwards;
+    animation-delay: 6s;
+}
+
+.footer a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.footer p {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #232323;
+}
+
+.footer p:hover {
+    color: #fff;
+}
+
+.footer p i {
+    margin-right: 5px;
+    font-size: 22px;
+    color: #232323;
+    animation: icon 2s forwards;
+    animation-delay: 4s;
+}
+
+.fa-youtube:before {
+    vertical-align: middle;
+}
+
+@keyframes top {
+    0% {
+        opacity: 0;
+        bottom: -80px;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 820px) {
+    .footer {
+        margin: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .container .box .title h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container .box {
+        margin-top: 150px;
+    }
+
+    .container .box .description p {
+        font-size: 13px;
+    }
+
+    .footer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .container .box .title h1 {
+        font-size: 20px;
+    }
+
+    .container .box .social p a {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 280px) {
+    .container .box .title h1 {
+        font-size: 18px;
+    }
+
+    .container .box .description {
+        padding: 0;
+    }
+
+    .container .box .description .block2 {
+        height: 200%;
+    }
+
+    .container .box .description p {
+        font-size: 10px;
+    }
+
+    .container .box .social .block {
+        height: 130%;
+    }
+
+    .container .box .social p a {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .footer p {
+        font-size: 15px;
+    }
+}
+
+@media (max-height: 280px) {
+    .container .box .social {
+        padding: 0;
+    }
+
+    .footer {
+        height: 60px;
+    }
+}
