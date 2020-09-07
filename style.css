@@ -3,395 +3,396 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body,
 html {
-  width: 100%;
-  overflow: hidden !important;
-  font-family: 'Balsamiq Sans', cursive;
+    width: 100%;
+    overflow: hidden !important;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: env(safe-area-inset);
 }
 
 .container {
-  position: relative;
+    position: relative;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #232323;
 }
 
 .container::before {
-  position: absolute;
+    position: absolute;
 
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: url(./assets/bandit.svg) no-repeat top center;
-  background-size: contain;
-  animation: bgFadeIn 6s linear;
-  opacity: 1;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(./assets/bandit.svg) no-repeat top center;
+    background-size: contain;
+    animation: bgFadeIn 6s linear;
+    opacity: 1;
 }
 
 .container .box {
-  position: relative;
+    position: relative;
 
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .container .box .title {
-  position: relative;
+    position: relative;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
 }
 
 .container .box .title .block {
-  position: absolute;
+    position: absolute;
 
-  display: flex;
-  width: 0%;
-  height: inherit;
-  background: #ffb510;
-  animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    display: flex;
+    width: 0%;
+    height: inherit;
+    background: #ffb510;
+    animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
 }
 
 .container .box .title h1 {
-  position: relative;
+    position: relative;
 
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-size: 32px;
-  animation: mainFadeIn 2s forwards;
-  animation-delay: 1.6s;
-  opacity: 0;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 32px;
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
 }
 
 .container .box .description {
-  position: relative;
+    position: relative;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5px 0;
 }
 
 .container .box .description .block2 {
-  position: absolute;
+    position: absolute;
 
-  display: flex;
-  width: 0%;
-  height: 140%;
-  background: #e91e63;
-  animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-  animation-delay: 2s;
+    display: flex;
+    width: 0%;
+    height: 140%;
+    background: #e91e63;
+    animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation-delay: 2s;
 }
 
 .container .box .description p {
-  font-size: 15px;
-  color: #ffffff;
-  text-align: center;
-  opacity: 0;
-  text-transform: uppercase;
-  animation: secFadeIn 2s forwards;
-  animation-delay: 3.2s;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+    opacity: 0;
+    text-transform: uppercase;
+    animation: secFadeIn 2s forwards;
+    animation-delay: 3.2s;
 }
 
 .container .box .social {
-  position: relative;
+    position: relative;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 10px;
 }
 
 .container .box .social .block {
-  position: absolute;
+    position: absolute;
 
-  display: flex;
-  width: 0%;
-  height: 160%;
-  background: #56d897;
-  animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-  animation-delay: 4s;
+    display: flex;
+    width: 0%;
+    height: 160%;
+    background: #56d897;
+    animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation-delay: 4s;
 }
 
 .container .box .social p a {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  opacity: 0;
-  font-weight: 400;
-  color: #ffffff;
-  text-decoration: none;
-  animation: secFadeIn 2s forwards;
-  animation-delay: 5.2s;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    opacity: 0;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+    animation: secFadeIn 2s forwards;
+    animation-delay: 5.2s;
 }
 
 a:hover {
-  opacity: 1 !important;
+    opacity: 1 !important;
 }
 
 @keyframes bgFadeIn {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  25% {
-    opacity: 0.25;
-  }
+    25% {
+        opacity: 0.25;
+    }
 
-  50% {
-    opacity: 0.5;
-  }
+    50% {
+        opacity: 0.5;
+    }
 
-  75% {
-    opacity: 0.75;
-  }
+    75% {
+        opacity: 0.75;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes mainBlock {
-  0% {
-    width: 0%;
-    left: 0;
-  }
+    0% {
+        width: 0%;
+        left: 0;
+    }
 
-  50% {
-    width: 100%;
-    left: 0;
-  }
+    50% {
+        width: 100%;
+        left: 0;
+    }
 
-  100% {
-    width: 0;
-    left: 100%;
-  }
+    100% {
+        width: 0;
+        left: 100%;
+    }
 }
 
 @keyframes secBlock {
-  0% {
-    width: 0%;
-    left: 0;
-  }
+    0% {
+        width: 0%;
+        left: 0;
+    }
 
-  50% {
-    width: 100%;
-    left: 0;
-  }
+    50% {
+        width: 100%;
+        left: 0;
+    }
 
-  100% {
-    width: 0;
-    left: 100%;
-  }
+    100% {
+        width: 0;
+        left: 100%;
+    }
 }
 
 @keyframes mainFadeIn {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes popIn {
-  0% {
-    width: 0px;
-    height: 0px;
-    background: #e9d856;
-    border: 0px solid #ddd;
-    opacity: 0;
-  }
+    0% {
+        width: 0px;
+        height: 0px;
+        background: #e9d856;
+        border: 0px solid #ddd;
+        opacity: 0;
+    }
 
-  50% {
-    width: 10px;
-    height: 10px;
-    background: #e9d856;
-    opacity: 1;
-    bottom: 45px;
-  }
+    50% {
+        width: 10px;
+        height: 10px;
+        background: #e9d856;
+        opacity: 1;
+        bottom: 45px;
+    }
 
-  65% {
-    width: 7px;
-    height: 7px;
-    bottom: 0px;
-    width: 15px;
-  }
+    65% {
+        width: 7px;
+        height: 7px;
+        bottom: 0px;
+        width: 15px;
+    }
 
-  80% {
-    width: 10px;
-    height: 10px;
-    bottom: 20px;
-  }
+    80% {
+        width: 10px;
+        height: 10px;
+        bottom: 20px;
+    }
 
-  100% {
-    width: 7px;
-    height: 7px;
-    background: #e9d856;
-    border: 0px solid #222;
-    bottom: 9px;
-  }
+    100% {
+        width: 7px;
+        height: 7px;
+        background: #e9d856;
+        border: 0px solid #222;
+        bottom: 9px;
+    }
 }
 
 @keyframes secFadeIn {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 0.5;
-  }
+    100% {
+        opacity: 0.5;
+    }
 }
 
 .footer {
-  position: absolute;
-  right: 0;
-  bottom: -100px;
+    position: absolute;
+    right: 0;
+    bottom: -100px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 350px;
-  height: 80px;
-  background: #ffb510;
-  animation: top 0.8s forwards;
-  animation-delay: 6s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    height: 80px;
+    background: #ffb510;
+    animation: top 0.8s forwards;
+    animation-delay: 6s;
 }
 
 .footer a {
-  text-decoration: none;
-  margin-left: 10px;
+    text-decoration: none;
+    margin-left: 10px;
 }
 
 .footer p {
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  color: #232323;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #232323;
 }
 
 .footer p:hover {
-  color: #fff;
+    color: #fff;
 }
 
 .footer p i {
-  margin-right: 5px;
-  font-size: 22px;
-  color: #232323;
-  animation: icon 2s forwards;
-  animation-delay: 4s;
+    margin-right: 5px;
+    font-size: 22px;
+    color: #232323;
+    animation: icon 2s forwards;
+    animation-delay: 4s;
 }
 
 .fa-telegram-plane:before {
-  padding-right: 5.5px;
+    padding-right: 5.5px;
 }
 
 @keyframes top {
-  0% {
-    opacity: 0;
-    bottom: -100px;
-  }
+    0% {
+        opacity: 0;
+        bottom: -100px;
+    }
 
-  100% {
-    opacity: 1;
-    bottom: 0px;
-  }
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
 }
 
 @media (min-width: 0px) and (max-width: 900px) {
-  .footer {
-    margin: auto;
-    left: 0;
-    right: 0;
-  }
+    .footer {
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
 }
 
 @media (max-width: 450px) {
-  .container .box .title h1 {
-    font-size: 25px;
-  }
+    .container .box .title h1 {
+        font-size: 25px;
+    }
 }
 
 @media (max-width: 375px) {
-  .container .box {
-    margin-top: 150px;
-  }
+    .container .box {
+        margin-top: 150px;
+    }
 
-  .container .box .description p {
-    font-size: 13px;
-  }
+    .container .box .description p {
+        font-size: 13px;
+    }
 
-  .footer {
-    width: 100%;
-  }
+    .footer {
+        width: 100%;
+    }
 }
 
 @media (max-width: 360px) {
-  .container .box .title h1 {
-    font-size: 20px;
-  }
+    .container .box .title h1 {
+        font-size: 20px;
+    }
 
-  .container .box .social p a {
-    font-size: 12px;
-    letter-spacing: 3px;
-  }
+    .container .box .social p a {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
 }
 
 @media (max-width: 280px) {
-  .container .box .title h1 {
-    font-size: 18px;
-  }
+    .container .box .title h1 {
+        font-size: 18px;
+    }
 
-  .container .box .description {
-    padding: 0;
-  }
+    .container .box .description {
+        padding: 0;
+    }
 
-  .container .box .description .block2 {
-    height: 200%;
-  }
+    .container .box .description .block2 {
+        height: 200%;
+    }
 
-  .container .box .description p {
-    font-size: 10px;
-  }
+    .container .box .description p {
+        font-size: 10px;
+    }
 
-  .container .box .social .block {
-    height: 130%;
-  }
+    .container .box .social .block {
+        height: 130%;
+    }
 
-  .container .box .social p a {
-    font-size: 10px;
-    letter-spacing: 3px;
-  }
+    .container .box .social p a {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
 
-  .footer p {
-    font-size: 15px;
-  }
+    .footer p {
+        font-size: 15px;
+    }
 }
 
 @media (max-height: 280px) {
-  .container .box .social {
-    padding: 0;
-  }
+    .container .box .social {
+        padding: 0;
+    }
 
-  .footer {
-    height: 60px;
-  }
+    .footer {
+        height: 60px;
+    }
 }
